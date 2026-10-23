@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#f8f5ef">
-<title>Лапы дома — социальная инициатива Hoff · v3.9</title>
+<title>Лапы дома — социальная инициатива Hoff · v3.10</title>
 <style>
 :root{--bg:#f8f5ef;--paper:#fffdf9;--ink:#292a26;--muted:#6f7068;--line:#e8dfd4;--red:#c95f4c;--red2:#e18070;--sage:#343b32;--blush:#f5e8e0}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;line-height:1.5}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}.wrap{width:min(1200px,calc(100% - 44px));margin:auto}
@@ -81,6 +81,21 @@ footer{border-top:1px solid var(--line);padding:22px 0 27px}.footer-row{display:
  .adoption-module .module-cta{grid-column:1}
  .benefits{grid-template-columns:1fr}
  .catalog-paw{width:27px;height:27px;bottom:6px;left:6px}
+}
+
+
+/* v3.10: keep the full dog photo visible in the mobile hero */
+@media(max-width:850px){
+ .hero{min-height:0;display:flex;flex-direction:column;align-items:stretch;overflow:hidden}
+ .hero-copy{order:0;width:100%;padding:32px 22px 12px;background:none}
+ .hero-img{position:relative;inset:auto;order:1;display:block;width:100%;height:auto;aspect-ratio:1590/989;background:url('assets/hero-banner.jpg') center center/contain no-repeat;flex:0 0 auto}
+ .hero-note{position:relative;order:2;right:auto;bottom:auto;align-self:flex-end;margin:0 15px 16px;max-width:220px}
+}
+@media(max-width:520px){
+ .hero-copy{padding:27px 17px 10px}
+ .hero h1{font-size:clamp(42px,12vw,52px)}
+ .hero-img{aspect-ratio:1590/989;background-position:center center;background-size:contain;background-color:#eee5db}
+ .hero-note{margin:0 15px 14px}
 }
 
 </style>
